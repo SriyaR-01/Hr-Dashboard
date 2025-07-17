@@ -1,0 +1,20 @@
+.performance-table-wrapper {
+  width: 100%;
+  padding: 1rem;
+
+  .responsive-table-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+
+    table {
+      min-width: 900px;
+      width: 100%;
+      border-collapse: collapse;
+
+      th, td {
+        white-space: nowrap;
+        padding: 10px;
+      }
+    }
+  }
+}

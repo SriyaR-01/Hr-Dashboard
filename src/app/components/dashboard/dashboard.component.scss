@@ -1,0 +1,46 @@
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  flex: 1 1 calc(33% - 20px);
+  min-width: 200px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.section-spacing {
+  margin-top: 32px;
+}
+
+.summary-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.summary-card {
+  flex: 1 1 calc(33.3% - 16px);
+  min-width: 200px;
+}
+
+.recent-activity ul {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.performance-chart,
+.employee-table {
+  width: 100%;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.performance-chart,
+.employee-table {
+  cursor: pointer;
+}

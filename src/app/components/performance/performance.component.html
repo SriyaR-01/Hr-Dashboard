@@ -1,0 +1,12 @@
+<mat-card>
+  <mat-card-title>Performance Chart</mat-card-title>
+  <mat-card-content>
+    <canvas
+      baseChart
+      [datasets]="chartData"
+      [labels]="chartLabels"
+      [options]="chartOptions"
+      [chartType]="chartType"
+    ></canvas>
+  </mat-card-content>
+</mat-card>

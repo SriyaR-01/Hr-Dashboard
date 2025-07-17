@@ -1,0 +1,10 @@
+$gray-color: #dcd8d8;
+
+mat-nav-list a {
+  text-decoration: none;
+}
+
+.active-link {
+  background-color: $gray-color !important; 
+  border-radius: 4px;
+}

@@ -1,0 +1,38 @@
+.settings-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.settings-card {
+  width: 100%;
+}
+
+.settings-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+mat-form-field {
+  flex: 1 1 250px;
+  min-width: 200px;
+}
+
+.language-select {
+  margin-top: 16px;
+  width: 100%;
+  max-width: 300px;
+}
+
+.toggle-group {
+  margin: 8px 0;
+}
+
+.save-button-container {
+  display: flex;
+  justify-content: flex-end;
+}

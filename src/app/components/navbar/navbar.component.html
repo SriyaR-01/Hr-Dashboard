@@ -1,0 +1,52 @@
+<mat-toolbar color="primary" class="navbar">
+  <button
+    mat-icon-button
+    (click)="toggleSidenav.emit()"
+    aria-label="Toggle sidenav"
+  >
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span class="navbar-title">HR Dashboard</span>
+
+  <span class="spacer"></span>
+
+  <button
+    mat-icon-button
+    [matMenuTriggerFor]="notificationsMenu"
+    aria-label="Notifications"
+  >
+    <mat-icon>notifications</mat-icon>
+  </button>
+  <mat-menu #notificationsMenu="matMenu">
+    <button mat-menu-item disabled>You have 3 new notifications</button>
+    <mat-divider></mat-divider>
+    <button mat-menu-item>
+      <mat-icon>info</mat-icon>
+      <span>Policy update available</span>
+    </button>
+    <button mat-menu-item>
+      <mat-icon>event</mat-icon>
+      <span>Upcoming HR meeting</span>
+    </button>
+    <button mat-menu-item>
+      <mat-icon>check_circle</mat-icon>
+      <span>Performance review completed</span>
+    </button>
+  </mat-menu>
+
+  <button mat-button [matMenuTriggerFor]="accountMenu" class="account-button">
+    <mat-icon>account_circle</mat-icon>
+    <span class="username">Admin</span>
+    <mat-icon>arrow_drop_down</mat-icon>
+  </button>
+  <mat-menu #accountMenu="matMenu">
+    <button mat-menu-item (click)="goToProfile()">
+      <mat-icon>person</mat-icon>
+      <span>Profile</span>
+    </button>
+    <button mat-menu-item (click)="logout()">
+      <mat-icon>logout</mat-icon>
+      <span>Logout</span>
+    </button>
+  </mat-menu>
+</mat-toolbar>

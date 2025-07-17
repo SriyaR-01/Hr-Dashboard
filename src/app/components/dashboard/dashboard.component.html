@@ -1,0 +1,47 @@
+<div class="section-spacing"></div>
+
+<section class="summary-stats">
+  <mat-card class="summary-card" *ngFor="let stat of summaryStats">
+    <mat-card-title>{{ stat.title }}</mat-card-title>
+    <mat-card-content>{{ stat.value }}</mat-card-content>
+  </mat-card>
+</section>
+
+<section class="recent-activity section-spacing">
+  <mat-card>
+    <mat-card-title>Recent Activity</mat-card-title>
+    <mat-card-content>
+      <ul>
+        <li *ngFor="let activity of recentActivities">{{ activity }}</li>
+      </ul>
+    </mat-card-content>
+  </mat-card>
+</section>
+
+<section
+  class="performance-chart section-spacing"
+  (click)="navigateTo('performance')"
+>
+  <app-performance></app-performance>
+</section>
+
+<!-- <section class="employee-table section-spacing" >
+  <mat-card class="clickable-card">
+    <mat-card-title>Employee Table</mat-card-title>
+    <mat-card-content (click)="navigateTo('employee')">
+      <app-employee></app-employee>
+    </mat-card-content>
+  </mat-card>
+</section> -->
+
+<section class="employee-table section-spacing">
+  <mat-card class="clickable-card">
+    <mat-card-title>Employee Table</mat-card-title>
+    <mat-card-content>
+      <app-employee
+        (click)="navigateTo('employee')"
+        [dashboardView]="dashboardView"
+      ></app-employee>
+    </mat-card-content>
+  </mat-card>
+</section>
