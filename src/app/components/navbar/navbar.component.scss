@@ -1,12 +1,22 @@
+$navbar-bg: #003366;
+$text-white: white;
+
 .navbar {
   display: flex;
   align-items: center;
   padding: 0 16px;
+  background-color: $navbar-bg !important;
+  color: $text-white;
 
-  .navbar-title {
-    font-size: 20px;
-    font-weight: 500;
-    margin-left: 12px;
+  .logo-container {
+    display: flex;
+    align-items: center;
+
+    .logo-text {
+      margin-left: 12px;
+      font-size: 20px;
+      font-weight: bold;
+    }
   }
 
   .spacer {
@@ -21,10 +31,16 @@
 
     .username {
       margin-left: 4px;
+      color: $text-white;
     }
   }
 
   .mat-icon {
     vertical-align: middle;
+    color: $text-white;
+  }
+
+  button.mat-button {
+    color: $text-white;
   }
 }

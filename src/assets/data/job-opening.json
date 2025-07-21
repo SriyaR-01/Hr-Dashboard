@@ -1,0 +1,134 @@
+[
+  {
+    "id": 1,
+    "title": "Frontend Developer",
+    "department": "Engineering",
+    "location": "Bangalore, India",
+    "employmentType": "Full-time",
+    "experience": "2+ years",
+    "description": "Develop responsive web interfaces using Angular.",
+    "postedDate": "2025-07-10",
+    "skills": ["Angular", "TypeScript", "SCSS", "REST APIs"]
+  },
+  {
+    "id": 2,
+    "title": "Backend Developer",
+    "department": "Engineering",
+    "location": "Hyderabad, India",
+    "employmentType": "Full-time",
+    "experience": "3+ years",
+    "description": "Build scalable backend services and APIs.",
+    "postedDate": "2025-07-09",
+    "skills": ["Node.js", "Express", "MongoDB", "REST"]
+  },
+  {
+    "id": 3,
+    "title": "UI/UX Designer",
+    "department": "Design",
+    "location": "Remote",
+    "employmentType": "Contract",
+    "experience": "4+ years",
+    "description": "Design user-centric interfaces and experiences.",
+    "postedDate": "2025-07-08",
+    "skills": ["Figma", "Adobe XD", "Prototyping", "User Research"]
+  },
+  {
+    "id": 4,
+    "title": "QA Engineer",
+    "department": "Quality Assurance",
+    "location": "Pune, India",
+    "employmentType": "Full-time",
+    "experience": "2+ years",
+    "description": "Test and ensure software quality through manual and automation.",
+    "postedDate": "2025-07-07",
+    "skills": ["Selenium", "TestNG", "Manual Testing", "JIRA"]
+  },
+  {
+    "id": 5,
+    "title": "HR Manager",
+    "department": "Human Resources",
+    "location": "Remote",
+    "employmentType": "Full-time",
+    "experience": "5+ years",
+    "description": "Manage hiring processes and HR policies.",
+    "postedDate": "2025-07-06",
+    "skills": ["Recruitment", "Employee Engagement", "Compliance"]
+  },
+  {
+    "id": 6,
+    "title": "DevOps Engineer",
+    "department": "Engineering",
+    "location": "Chennai, India",
+    "employmentType": "Full-time",
+    "experience": "3+ years",
+    "description": "Automate deployments and manage cloud infrastructure.",
+    "postedDate": "2025-07-05",
+    "skills": ["AWS", "Docker", "CI/CD", "Terraform"]
+  },
+  {
+    "id": 7,
+    "title": "Product Manager",
+    "department": "Product",
+    "location": "Delhi, India",
+    "employmentType": "Full-time",
+    "experience": "5+ years",
+    "description": "Drive product strategy and feature delivery.",
+    "postedDate": "2025-07-04",
+    "skills": ["Product Roadmap", "Stakeholder Management", "Agile"]
+  },
+  {
+    "id": 8,
+    "title": "Data Analyst",
+    "department": "Analytics",
+    "location": "Mumbai, India",
+    "employmentType": "Full-time",
+    "experience": "2+ years",
+    "description": "Analyze data trends and support business decisions.",
+    "postedDate": "2025-07-03",
+    "skills": ["SQL", "Excel", "Tableau", "Data Visualization"]
+  },
+  {
+    "id": 9,
+    "title": "Marketing Executive",
+    "department": "Marketing",
+    "location": "Kolkata, India",
+    "employmentType": "Part-time",
+    "experience": "1+ year",
+    "description": "Assist in digital marketing campaigns and brand promotion.",
+    "postedDate": "2025-07-02",
+    "skills": ["SEO", "Social Media", "Google Ads", "Content Creation"]
+  },
+  {
+    "id": 10,
+    "title": "Customer Support Specialist",
+    "department": "Support",
+    "location": "Remote",
+    "employmentType": "Full-time",
+    "experience": "1+ year",
+    "description": "Provide email and chat support to users.",
+    "postedDate": "2025-07-01",
+    "skills": ["Communication", "CRM", "Zendesk", "Problem Solving"]
+  },
+  {
+    "id": 11,
+    "title": "Finance Analyst",
+    "department": "Finance",
+    "location": "Ahmedabad, India",
+    "employmentType": "Full-time",
+    "experience": "3+ years",
+    "description": "Prepare financial reports and forecasts.",
+    "postedDate": "2025-06-30",
+    "skills": ["Budgeting", "Excel", "Financial Modeling"]
+  },
+  {
+    "id": 12,
+    "title": "IT Support Engineer",
+    "department": "IT",
+    "location": "Noida, India",
+    "employmentType": "Full-time",
+    "experience": "2+ years",
+    "description": "Provide technical support and manage IT systems.",
+    "postedDate": "2025-06-29",
+    "skills": ["Networking", "Hardware Support", "Ticketing Systems"]
+  }
+]

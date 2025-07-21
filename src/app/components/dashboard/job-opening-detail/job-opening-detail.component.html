@@ -1,0 +1,50 @@
+<div *ngIf="!job" class="loading-container">
+  <mat-spinner diameter="50"></mat-spinner>
+  <p>Loading job details...</p>
+</div>
+
+<div class="job-detail-container" *ngIf="job">
+  <button mat-icon-button class="back-button" (click)="goBack()">
+    <mat-icon>arrow_back</mat-icon>
+  </button>
+  <mat-card class="job-detail-card">
+    <div class="job-header">
+      <div>
+        <h2>{{ job.title }}</h2>
+        <p class="job-meta">
+          <mat-icon>business</mat-icon> {{ job.department }} &nbsp;|&nbsp;
+          <mat-icon>place</mat-icon> {{ job.location }} &nbsp;|&nbsp;
+          <mat-icon>schedule</mat-icon> {{ job.employmentType }}
+        </p>
+      </div>
+    </div>
+
+    <mat-divider></mat-divider>
+
+    <div class="job-section">
+      <h3>Description</h3>
+      <p>{{ job.description }}</p>
+    </div>
+
+    <div class="job-section">
+      <h3>Required Skills</h3>
+      <div class="skills-list">
+        <mat-chip-list>
+          <mat-chip *ngFor="let skill of job.skills" color="primary" selected>
+            {{ skill }}
+          </mat-chip>
+        </mat-chip-list>
+      </div>
+    </div>
+
+    <div class="job-section">
+      <h3>Experience Required</h3>
+      <p>{{ job.experience }}</p>
+    </div>
+
+    <div class="job-section">
+      <h3>Posted On</h3>
+      <p>{{ job.postedDate | date }}</p>
+    </div>
+  </mat-card>
+</div>

@@ -1,0 +1,45 @@
+<div class="filter-bar">
+  <mat-form-field appearance="fill">
+    <mat-label>Department</mat-label>
+    <mat-select [(value)]="selectedDept" (selectionChange)="applyFilters()">
+      <mat-option value="">All</mat-option>
+      <mat-option *ngFor="let dept of departments" [value]="dept">{{
+        dept
+      }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Location</mat-label>
+    <mat-select [(value)]="selectedLoc" (selectionChange)="applyFilters()">
+      <mat-option value="">All</mat-option>
+      <mat-option *ngFor="let loc of locations" [value]="loc">{{
+        loc
+      }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <button mat-stroked-button (click)="clearFilters()">Clear</button>
+</div>
+
+<div class="job-section">
+  <div
+    class="job-card"
+    *ngFor="let job of filteredJobs"
+    (click)="viewDetails(job.id)"
+  >
+    <div class="job-info">
+      <strong>{{ job.title }}</strong>
+      <p>{{ job.department }}</p>
+    </div>
+    <div class="job-location">
+      <span class="location">{{ job.location }}</span>
+    </div>
+    <button class="arrow" [routerLink]="['/job-openings', job.id]">
+      <mat-icon>arrow_forward</mat-icon>
+    </button>
+  </div>
+  <div class="no-results" *ngIf="filteredJobs.length === 0">
+    <h2>No job openings found for the selected filters.</h2>
+  </div>
+</div>

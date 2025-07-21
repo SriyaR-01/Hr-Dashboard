@@ -1,0 +1,57 @@
+$box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+$meta-color: #666;
+$spacing-unit: 1rem;
+$whie-color: #fff;
+$back-color: #333;
+
+.job-detail-container {
+  padding: 2rem;
+}
+
+.job-detail-card {
+  padding: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: $box-shadow;
+  background-color: $whie-color;
+  border-radius: 8px;
+}
+
+.job-header {
+  h2 {
+    margin: 0;
+  }
+}
+
+.job-meta {
+  color: $meta-color;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.job-section {
+  margin-top: 1.5rem;
+}
+
+.skills-list {
+  margin-top: 0.5rem;
+}
+
+.apply-button {
+  margin-top: 2rem;
+  text-align: right;
+}
+
+.back-button {
+  margin-bottom: 12px;
+  background: $whie-color;
+  border-radius: 50%;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+
+  mat-icon {
+    color: $back-color;
+  }
+}

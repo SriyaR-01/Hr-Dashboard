@@ -1,0 +1,76 @@
+<div class="employee-table-wrapper">
+  <mat-form-field
+    appearance="outline"
+    class="search-bar"
+    *ngIf="!dashboardView"
+  >
+    <mat-label>Search employees</mat-label>
+    <input matInput [(ngModel)]="searchValue" (keyup)="applyFilter($event)" />
+    <button
+      mat-icon-button
+      matSuffix
+      *ngIf="searchValue"
+      (click)="clearSearch()"
+    >
+      <mat-icon>close</mat-icon>
+    </button>
+  </mat-form-field>
+
+  <ng-container *ngIf="loading; else employeeCards">
+    <div class="skeleton-table">
+      <div class="skeleton-row" *ngFor="let i of [1, 2, 3, 4, 5, 6, 7, 8]">
+        <div class="skeleton-card"></div>
+      </div>
+    </div>
+  </ng-container>
+
+  <ng-template #employeeCards>
+    <div
+      class="employee-card-container"
+      *ngIf="filteredEmployees.length > 0; else noResults"
+    >
+      <mat-card class="employee-card" *ngFor="let emp of filteredEmployees">
+        <div class="employee-header">
+          <img
+            [src]="
+              'https://api.dicebear.com/7.x/adventurer/svg?seed=' + emp.name
+            "
+            alt="{{ emp.name }}"
+            class="avatar"
+          />
+
+          <div class="employee-info">
+            <h3>{{ emp.name }}</h3>
+            <p class="designation">{{ emp.company.bs | titlecase }}</p>
+          </div>
+        </div>
+
+        <mat-divider></mat-divider>
+
+        <div class="employee-details">
+          <div>
+            <label>Department</label>
+            <p>{{ emp.company.name }}</p>
+          </div>
+          <div>
+            <label>Hire Date</label>
+            <p>{{ emp.hireDate | date: 'mediumDate' }}</p>
+
+          </div>
+        </div>
+
+        <div class="employee-contact">
+          <p>
+            <mat-icon>email</mat-icon>
+            <a href="mailto:{{ emp.email }}">{{ emp.email }}</a>
+          </p>
+          <p><mat-icon>phone</mat-icon> {{ emp.phone }}</p>
+        </div>
+      </mat-card>
+    </div>
+  </ng-template>
+
+  <ng-template #noResults>
+    <h2 class="no-results">No employees found</h2>
+  </ng-template>
+</div>

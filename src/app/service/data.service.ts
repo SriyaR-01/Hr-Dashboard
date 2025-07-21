@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 export interface Employee {
@@ -11,35 +11,57 @@ export interface Employee {
   phone: string;
   company: {
     name: string;
+    bs: string;
   };
+  department?: string;
+  hireDate?: string;
 }
 
+export interface Performance {
+  avgRating: number;
+  attendance: number;
+  projectsCompleted: number;
+}
+export interface PerformanceData {
+  avgRating: number;
+  attendance: number;
+  projectsCompleted: number;
+}
+
+export interface Jobs {
+  id: number;
+  title: string;
+  department: string;
+  location: string;
+  employmentType: string;
+  experience: string;
+  description: string;
+  postedDate: string;
+  skills: string[];
+}
 @Injectable({
   providedIn: 'root',
 })
 export class DataService {
   constructor(private http: HttpClient) {}
 
-  public getEmployees(): Observable<Employee[]> {
-    return this.http.get<Employee[]>(
-      'https://jsonplaceholder.typicode.com/users'
+  getEmployees(): Observable<Employee[]> {
+    return this.http.get<Employee[]>('assets/data/employee.json');
+  }
+
+  public getPerformance(): Observable<{ [key: number]: PerformanceData }> {
+    return this.http.get<{ [key: number]: PerformanceData }>(
+      'assets/data/performance.json'
     );
   }
 
-  public getPerformanceRawData(): Observable<{
-    labels: string[];
-    values: number[];
-  }> {
-    return this.http
-      .get<any[]>('https://jsonplaceholder.typicode.com/posts')
-      .pipe(
-        map((data) => {
-          const top10 = data.slice(0, 10);
-          return {
-            labels: top10.map((post) => `Post ${post.id}`),
-            values: top10.map((post) => post.title.length),
-          };
-        })
-      );
+  public getJobOpenings(): Observable<Jobs[]> {
+    return this.http.get<Jobs[]>('assets/data/job-opening.json');
+  }
+
+  public getJobById(id: number): Observable<any> {
+    return this.getJobOpenings().pipe(
+      map((jobs) => jobs.find((job) => job.id === id))
+    );
   }
 }

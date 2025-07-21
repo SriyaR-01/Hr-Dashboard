@@ -1,12 +1,39 @@
-<mat-card>
-  <mat-card-title>Performance Chart</mat-card-title>
-  <mat-card-content>
-    <canvas
-      baseChart
-      [datasets]="chartData"
-      [labels]="chartLabels"
-      [options]="chartOptions"
-      [chartType]="chartType"
-    ></canvas>
-  </mat-card-content>
-</mat-card>
+<div class="performance-dashboard">
+  <div class="filters">
+    <label for="employee">Select Employee:</label>
+    <select
+      id="employee"
+      [(ngModel)]="selectedEmployeeId"
+      (change)="onEmployeeChange()"
+    >
+      <option *ngFor="let emp of employees" [value]="emp.id">{{ emp.name }}</option>
+    </select>
+  </div>
+
+  <div class="charts-grid">
+    <div class="chart-box wide">
+      <h3>Training vs Project Completion</h3>
+      <canvas baseChart
+        [data]="comboChartData"
+        [type]="'line'"
+        [options]="comboChartOptions">
+      </canvas>
+    </div>
+
+    <div class="chart-box">
+      <h3>Weekly Productivity</h3>
+      <canvas baseChart
+        [data]="salesChartData"
+        [type]="'line'">
+      </canvas>
+    </div>
+
+    <div class="chart-box">
+      <h3>Task Status by Week</h3>
+      <canvas baseChart
+        [data]="barChartData"
+        [type]="'bar'">
+      </canvas>
+    </div>
+  </div>
+</div>

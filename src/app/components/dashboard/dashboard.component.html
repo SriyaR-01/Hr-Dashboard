@@ -1,38 +1,80 @@
-<div class="section-spacing"></div>
+<div class="dashboard-wrapper section-spacing">
+  <div class="summary-cards-row">
+    <mat-card class="summary-card teal" (click)="navigateTo('employee')">
+      <mat-icon class="card-icon">groups</mat-icon>
+      <div class="card-content">
+        <h2>{{ summaryStats[0].value }}</h2>
+        <p>{{ summaryStats[0].title }}</p>
+      </div>
+    </mat-card>
+    <mat-card class="summary-card amber" (click)="navigateTo('job-openings')">
+      <mat-icon class="card-icon">work</mat-icon>
+      <div class="card-content">
+        <h2>{{ summaryStats[1].value }}</h2>
+        <p>{{ summaryStats[1].title }}</p>
+      </div>
+    </mat-card>
+    <mat-card class="summary-card pink" (click)="navigateTo('employee')">
+      <mat-icon class="card-icon">person_add</mat-icon>
+      <div class="card-content">
+        <h2>{{ summaryStats[2].value }}</h2>
+        <p>{{ summaryStats[2].title }}</p>
+      </div>
+    </mat-card>
+  </div>
+  <div class="charts-grid">
+    <div class="chart-item">
+      <h3>Net Employee Growth: Hires vs. Departures</h3>
+      <canvas
+        baseChart
+        [data]="growthChartData"
+        [options]="barChartOptions"
+        [type]="'bar'"
+      >
+      </canvas>
+    </div>
+    <div class="chart-item pie-chart-item">
+      <h3>Total Employee Cost Breakdown</h3>
+      <canvas
+        baseChart
+        [data]="costPieChartData"
+        [options]="pieChartOptions"
+        [type]="'pie'"
+      >
+      </canvas>
+    </div>
 
-<section class="summary-stats">
-  <mat-card class="summary-card" *ngFor="let stat of summaryStats">
-    <mat-card-title>{{ stat.title }}</mat-card-title>
-    <mat-card-content>{{ stat.value }}</mat-card-content>
-  </mat-card>
-</section>
-
-<section class="recent-activity section-spacing">
-  <mat-card>
-    <mat-card-title>Recent Activity</mat-card-title>
-    <mat-card-content>
-      <ul>
-        <li *ngFor="let activity of recentActivities">{{ activity }}</li>
-      </ul>
-    </mat-card-content>
-  </mat-card>
-</section>
-
-<section
-  class="performance-chart section-spacing"
-  (click)="navigateTo('performance')"
->
-  <app-performance></app-performance>
-</section>
-
-<section class="employee-table section-spacing">
-  <mat-card class="clickable-card">
-    <mat-card-title>Employee Table</mat-card-title>
-    <mat-card-content>
-      <app-employee
-        (click)="navigateTo('employee')"
-        [dashboardView]="dashboardView"
-      ></app-employee>
-    </mat-card-content>
-  </mat-card>
-</section>
+    <div class="chart-item">
+      <h3>Employee Satisfaction Rate</h3>
+      <table class="heatmap-table">
+        <thead>
+          <tr>
+            <th>Department</th>
+            <th *ngFor="let quarter of heatmapQuarters">{{ quarter }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let dept of heatmapData">
+            <td>{{ dept.name }}</td>
+            <td
+              *ngFor="let score of dept.scores"
+              [ngStyle]="{ 'background-color': getHeatColor(score) }"
+            >
+              {{ score }}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="chart-item">
+      <h3>Total Number of Employees Over Time</h3>
+      <canvas
+        baseChart
+        [data]="employeeLineChartData"
+        [options]="lineChartOptions"
+        [type]="'line'"
+      >
+      </canvas>
+    </div>
+  </div>
+</div>

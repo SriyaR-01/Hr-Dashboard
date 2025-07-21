@@ -1,10 +1,28 @@
-$gray-color: #dcd8d8;
+$sidenav-bg: #002244;
+$sidenav-text: #ffffff;
+$active-link-bg: #013366;
 
-mat-nav-list a {
-  text-decoration: none;
+mat-nav-list {
+  height: 100%;
+  padding-top: 16px;
+  background-color: $sidenav-bg;
+  color: $sidenav-text;
+  overflow: hidden;
+}
+
+a.mat-list-item {
+  color: $sidenav-text;
+  font-weight: 500;
+  mat-icon {
+    margin-right: 12px;
+    color: $sidenav-text;
+  }
 }
 
 .active-link {
-  background-color: $gray-color !important; 
+  background-color: $active-link-bg !important;
   border-radius: 4px;
+}
+::ng-deep .mat-drawer-inner-container {
+  overflow: hidden !important;
 }

@@ -1,0 +1,22 @@
+<div class="job-section">
+  <div class="header">
+    <h3>Latest open positions</h3>
+    <a (click)="viewAll()">See all positions</a>
+  </div>
+  <div
+    class="job-card"
+    *ngFor="let job of jobs"
+    [routerLink]="['/job-openings', job.id]"
+  >
+    <div>
+      <strong>{{ job.title }}</strong>
+      <p>{{ job.department }}</p>
+    </div>
+    <div>
+      <span class="location">{{ job.location }}</span>
+    </div>
+    <button class="arrow">
+      <mat-icon>arrow_forward</mat-icon>
+    </button>
+  </div>
+</div>

@@ -1,0 +1,223 @@
+[
+  {
+    "id": 1,
+    "name": "Alice Johnson",
+    "email": "alice.johnson@example.com",
+    "phone": "123-456-7890",
+    "company": {
+      "name": "HR",
+      "bs": "Human Resources Manager"
+    },
+    "hireDate": "2023-02-15"
+  },
+  {
+    "id": 2,
+    "name": "Bob Smith",
+    "email": "bob.smith@example.com",
+    "phone": "234-567-8901",
+    "company": {
+      "name": "Engineering",
+      "bs": "Frontend Developer"
+    },
+    "hireDate": "2022-02-03"
+  },
+  {
+    "id": 3,
+    "name": "Charlie Davis",
+    "email": "charlie.davis@example.com",
+    "phone": "345-678-9012",
+    "company": {
+      "name": "Sales",
+      "bs": "Sales Executive"
+    },
+    "hireDate": "2019-05-12"
+  },
+  {
+    "id": 4,
+    "name": "Diana Prince",
+    "email": "diana.prince@example.com",
+    "phone": "456-789-0123",
+    "company": {
+      "name": "Finance",
+      "bs": "Financial Analyst"
+    },
+    "hireDate": "2020-06-19"
+  },
+  {
+    "id": 5,
+    "name": "Ethan Clark",
+    "email": "ethan.clark@example.com",
+    "phone": "567-890-1234",
+    "company": {
+      "name": "Marketing",
+      "bs": "Digital Marketer"
+    }
+    ,
+    "hireDate": "2022-10-30"
+  },
+  {
+    "id": 6,
+    "name": "Fiona Green",
+    "email": "fiona.green@example.com",
+    "phone": "678-901-2345",
+    "company": {
+      "name": "HR",
+      "bs": "Recruitment Lead"
+    },
+    "hireDate": "2023-07-13"
+  },
+  {
+    "id": 7,
+    "name": "George Martin",
+    "email": "george.martin@example.com",
+    "phone": "789-012-3456",
+    "company": {
+      "name": "Engineering",
+      "bs": "Backend Developer"
+    },
+    "hireDate": "2010-05-16"
+  },
+  {
+    "id": 8,
+    "name": "Hannah Lee",
+    "email": "hannah.lee@example.com",
+    "phone": "890-123-4567",
+    "company": {
+      "name": "Product",
+      "bs": "Product Manager"
+    },
+    "hireDate": "2024-02-08"
+  },
+  {
+    "id": 9,
+    "name": "Ian Wright",
+    "email": "ian.wright@example.com",
+    "phone": "901-234-5678",
+    "company": {
+      "name": "Customer Support",
+      "bs": "Support Specialist"
+    },
+    "hireDate": "2012-11-30"
+  },
+  {
+    "id": 10,
+    "name": "Jane Foster",
+    "email": "jane.foster@example.com",
+    "phone": "012-345-6789",
+    "company": {
+      "name": "Finance",
+      "bs": "Accounts Officer"
+    },
+    "hireDate": "2023-02-03"
+  },
+  {
+    "id": 11,
+    "name": "Kevin Brown",
+    "email": "kevin.brown@example.com",
+    "phone": "111-222-3333",
+    "company": {
+      "name": "Engineering",
+      "bs": "DevOps Engineer"
+    },
+    "hireDate": "2017-07-13"
+  },
+  {
+    "id": 12,
+    "name": "Laura Adams",
+    "email": "laura.adams@example.com",
+    "phone": "222-333-4444",
+    "company": {
+      "name": "Sales",
+      "bs": "Lead Generator"
+    },
+    "hireDate": "2022-02-03"
+  },
+  {
+    "id": 13,
+    "name": "Michael Scott",
+    "email": "michael.scott@example.com",
+    "phone": "333-444-5555",
+    "company": {
+      "name": "Management",
+      "bs": "Regional Manager"
+    },
+    "hireDate": "2017-05-05"
+  },
+  {
+    "id": 14,
+    "name": "Nina Brooks",
+    "email": "nina.brooks@example.com",
+    "phone": "444-555-6666",
+    "company": {
+      "name": "Design",
+      "bs": "UX Designer"
+    },
+    "hireDate": "2022-01-23"
+  },
+  {
+    "id": 15,
+    "name": "Oscar Turner",
+    "email": "oscar.turner@example.com",
+    "phone": "555-666-7777",
+    "company": {
+      "name": "IT",
+      "bs": "System Administrator"
+    },
+    "hireDate": "2021-08-16"
+  },
+  {
+    "id": 16,
+    "name": "Paula Young",
+    "email": "paula.young@example.com",
+    "phone": "666-777-8888",
+    "company": {
+      "name": "Engineering",
+      "bs": "Mobile Developer"
+    },
+    "hireDate": "2022-03-01"
+  },
+  {
+    "id": 17,
+    "name": "Quentin Blake",
+    "email": "quentin.blake@example.com",
+    "phone": "777-888-9999",
+    "company": {
+      "name": "Legal",
+      "bs": "Legal Advisor"
+    },
+    "hireDate": "2025-02-03"
+  },
+  {
+    "id": 18,
+    "name": "Rachel Kim",
+    "email": "rachel.kim@example.com",
+    "phone": "888-999-0000",
+    "company": {
+      "name": "Admin",
+      "bs": "Office Administrator"
+    },
+    "hireDate": "2019-12-13"
+  },
+  {
+    "id": 19,
+    "name": "Sam Wilson",
+    "email": "sam.wilson@example.com",
+    "phone": "999-000-1111",
+    "company": {
+      "name": "Marketing",
+      "bs": "SEO Expert"
+    },
+    "hireDate": "2016-09-13"
+  },
+  {
+    "id": 20,
+    "name": "Tina Black",
+    "email": "tina.black@example.com",
+    "phone": "000-111-2222",
+    "company": {
+      "name": "Engineering",
+      "bs": "Tech Lead"
+    },
+    "hireDate": "2015-06-23"
+  }
+]

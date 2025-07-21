@@ -1,35 +1,27 @@
 <div class="settings-container">
-  <mat-card class="settings-card">
-    <mat-card-title>Profile Settings</mat-card-title>
-    <mat-card-content>
-      <form class="settings-form">
-        <mat-form-field appearance="outline">
-          <mat-label>Name</mat-label>
-          <input matInput [(ngModel)]="name" name="name" />
-        </mat-form-field>
+  <h1>Settings</h1>
+  <p>Change your basic account settings here.</p>
 
-        <mat-form-field appearance="outline">
-          <mat-label>Email</mat-label>
-          <input matInput type="email" [(ngModel)]="email" name="email" />
-        </mat-form-field>
+  <form (ngSubmit)="onSubmit()" #settingsForm="ngForm" class="settings-form">
+    <label>Your name</label>
+    <input type="text" name="name" [(ngModel)]="settings.name" required />
 
-        <mat-form-field appearance="outline">
-          <mat-label>Phone</mat-label>
-          <input matInput [(ngModel)]="phone" name="phone" />
-        </mat-form-field>
-      </form>
-    </mat-card-content>
-  </mat-card>
+    <label>Your username</label>
+    <input
+      type="text"
+      name="username"
+      [(ngModel)]="settings.username"
+      required
+    />
 
-  <mat-card class="settings-card">
-    <mat-card-title>Notification Settings</mat-card-title>
-    <mat-card-content>
-      <mat-slide-toggle [(ngModel)]="notifications.email" name="emailNotif">Email Notifications</mat-slide-toggle>
-      <mat-slide-toggle [(ngModel)]="notifications.sms" name="smsNotif">SMS Notifications</mat-slide-toggle>
-    </mat-card-content>
-  </mat-card>
+    <label>Your email address</label>
+    <input type="email" name="email" [(ngModel)]="settings.email" required />
+    <small>Site notifications will be sent here.</small>
 
-  <div class="save-button-container">
-    <button mat-raised-button color="primary" (click)="saveSettings()">Save Settings</button>
-  </div>
+    <label>Your password</label>
+    <input type="password" name="password" [(ngModel)]="settings.password" />
+    <small>Leave this blank if you don't want to change it.</small>
+
+    <button type="submit">Save updates</button>
+  </form>
 </div>

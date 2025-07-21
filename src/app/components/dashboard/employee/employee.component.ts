@@ -7,39 +7,27 @@ import { DataService, Employee } from 'src/app/service/data.service';
   styleUrls: ['./employee.component.scss'],
 })
 export class EmployeeComponent implements OnInit {
-  @Input() dashboardView = false;
+  @Input() dashboardView: boolean = false;
   public employees: Employee[] = [];
   public filteredEmployees: Employee[] = [];
-  public displayedColumns: string[] = [
-    'id',
-    'name',
-    'username',
-    'email',
-    'phone',
-    'company',
-  ];
   public searchValue: string = '';
   public loading: boolean = true;
 
-  constructor(private DataService: DataService) {}
+  constructor(private dataService: DataService) {}
 
-  ngOnInit(): void {
-    this.DataService.getEmployees().subscribe((data) => {
+  public ngOnInit(): void {
+    this.dataService.getEmployees().subscribe((data: Employee[]): void => {
       this.employees = data;
       this.filteredEmployees = [...this.employees];
       this.loading = false;
     });
   }
 
-  public applyFilter(event: any): void {
-    this.searchValue = event.target.value.toLowerCase();
-
-    this.filteredEmployees = this.employees.filter((emp) =>
-      Object.values(emp)
-        .map((val) => (typeof val === 'object' ? Object.values(val) : [val]))
-        .some((value) =>
-          value?.toString().toLowerCase().includes(this.searchValue)
-        )
+  public applyFilter(event: Event): void {
+    const target = event.target as HTMLInputElement;
+    this.searchValue = target.value.toLowerCase();
+    this.filteredEmployees = this.employees.filter((emp: Employee) =>
+      JSON.stringify(emp).toLowerCase().includes(this.searchValue)
     );
   }
 

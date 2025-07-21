@@ -1,15 +1,13 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { EmployeeComponent } from './components/employee/employee.component';
+import { EmployeeComponent } from './components/dashboard/employee/employee.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { PerformanceComponent } from './components/performance/performance.component';
-
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -25,11 +23,16 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatInputModule } from '@angular/material/input';
-import { ChartsModule } from 'ng2-charts';
+import { NgChartsModule } from 'ng2-charts';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatBadgeModule } from '@angular/material/badge';
 import { LoginComponent } from './components/login/login.component';
 import { LayoutComponent } from './layout/layout.component';
+import { JobOpeningsComponent } from './components/dashboard/job-openings/job-openings.component';
+import { JobOpeningDetailComponent } from './components/dashboard/job-opening-detail/job-opening-detail.component';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatChipsModule } from '@angular/material/chips';
+import { AllJobOpeningsComponent } from './components/dashboard/all-job-openings/all-job-openings.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +46,9 @@ import { LayoutComponent } from './layout/layout.component';
     SidenavComponent,
     LoginComponent,
     LayoutComponent,
+    JobOpeningsComponent,
+    JobOpeningDetailComponent,
+    AllJobOpeningsComponent,
   ],
   imports: [
     BrowserModule,
@@ -61,9 +67,11 @@ import { LayoutComponent } from './layout/layout.component';
     MatInputModule,
     MatSelectModule,
     MatSlideToggleModule,
-    ChartsModule,
+    NgChartsModule,
     MatMenuModule,
-    MatBadgeModule
+    MatBadgeModule,
+    MatProgressSpinnerModule,
+    MatChipsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

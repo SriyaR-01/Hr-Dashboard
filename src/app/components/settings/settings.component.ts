@@ -6,27 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./settings.component.scss'],
 })
 export class SettingsComponent {
-  public name: string = 'John Doe';
-  public email: string = 'john.doe@example.com';
-  public phone: string = '123-456-7890';
-  public isDarkMode: boolean = false;
-
-  public notifications = {
-    email: true,
-    sms: false,
+  settings = {
+    name: 'Joe',
+    username: 'JoeKris',
+    email: 'JoeKris@gmail.com',
+    password: '',
   };
 
-  public language: string = 'en';
-
-  public saveSettings(): void {
-    const settings = {
-      name: this.name,
-      email: this.email,
-      phone: this.phone,
-      isDarkMode: this.isDarkMode,
-      notifications: this.notifications,
-      language: this.language,
-    };
-    alert('Settings saved successfully!');
+  public onSubmit(): void {
+    alert('Your settings have been successfully updated!');
   }
 }

@@ -1,38 +1,85 @@
+$max-width: 600px;
+$container-padding: 0 20px;
+$margin-top-lg: 40px;
+$margin-bottom-md: 30px;
+$margin-top-md: 20px;
+$margin-top-sm: 4px;
+$input-padding: 8px;
+$input-font-size: 14px;
+$input-border: 1px solid #ccc;
+$border-radius-sm: 2px;
+$font-size-base: 14px;
+$font-size-sm: 12px;
+$link-color: #0366d6;
+$text-muted: #666;
+$btn-bg: white;
+$btn-hover-bg: #f5f5f5;
+$btn-color: black;
+$btn-border: 1px solid black;
+$btn-radius: 3px;
+
 .settings-container {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  padding: 16px;
-  max-width: 100%;
-  overflow: hidden;
-}
+  max-width: $max-width;
+  margin: $margin-top-lg auto;
+  padding: $container-padding;
 
-.settings-card {
-  width: 100%;
-}
+  h1 {
+    font-size: 28px;
+    margin-bottom: 8px;
+  }
 
-.settings-form {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-}
+  p {
+    font-size: $font-size-base;
+    margin-bottom: $margin-bottom-md;
 
-mat-form-field {
-  flex: 1 1 250px;
-  min-width: 200px;
-}
+    a {
+      color: $link-color;
+      text-decoration: none;
 
-.language-select {
-  margin-top: 16px;
-  width: 100%;
-  max-width: 300px;
-}
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
 
-.toggle-group {
-  margin: 8px 0;
-}
+  .settings-form {
+    display: flex;
+    flex-direction: column;
 
-.save-button-container {
-  display: flex;
-  justify-content: flex-end;
+    label {
+      margin-top: $margin-top-md;
+      font-weight: 600;
+      font-size: $font-size-base;
+    }
+
+    input {
+      padding: $input-padding;
+      font-size: $input-font-size;
+      border: $input-border;
+      border-radius: $border-radius-sm;
+      margin-top: $margin-top-sm;
+    }
+
+    small {
+      font-size: $font-size-sm;
+      color: $text-muted;
+      margin-top: 2px;
+    }
+
+    button {
+      margin-top: $margin-bottom-md;
+      padding: 10px 0;
+      font-size: 16px;
+      font-weight: bold;
+      background: $btn-bg;
+      color: $btn-color;
+      border: $btn-border;
+      border-radius: $btn-radius;
+      cursor: pointer;
+
+      &:hover {
+        background: $btn-hover-bg;
+      }
+    }
+  }
 }
